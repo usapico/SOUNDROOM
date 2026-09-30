@@ -23,7 +23,7 @@ PCの録音はWindowsの標準の出力先の音を取り込みます。マイ�
 
 ## 対象環境
 
-Windows 10 / 11（x64・64bit）
+Windows 10 22H2 / Windows 11（x64・64bit）
 
 ## 公開後の使いはじめ方
 
@@ -34,5 +34,15 @@ Windows 10 / 11（x64・64bit）
 インストールは不要です。実行ファイルだけを取り出さず、付属のファイルとフォルダーも一緒に保管してください。
 
 編集プロジェクトには音源本体を埋め込まず、元ファイルの場所と編集内容を保存します。編集を再開できるよう、元の音源も同じ場所に残してください。
+
+## FFmpegとライセンス
+
+SOUNDROOMは音声処理にFFmpegを使用しています。公開候補には、必要な依存に絞って再ビルドしたWindows x64版FFmpeg／ffprobe（**LGPL-3.0-or-later**）を同梱します。
+
+[対応ソース・ライセンス全文・ビルド手順をダウンロード](https://github.com/usapico/SOUNDROOM/releases/download/ffmpeg-lgpl-20260930/SOUNDROOM-FFmpeg-LGPL-source-20260930.zip) / [ソース配布ページ](https://github.com/usapico/SOUNDROOM/releases/tag/ffmpeg-lgpl-20260930)
+
+対応ソースにはFFmpeg・LAME・zlib、静的ランタイムのソースとパッチ、ビルド設定・手順・通知文を収録しています。アプリZIPにもライセンスと取得案内を同梱します。SOUNDROOM本体は別プロセスとしてFFmpegを実行し、Electron付属の `ffmpeg.dll` は別に扱います。
+
+この対応ソースの公開は、SOUNDROOM本体のソースコード公開を意味しません。
 
 作者：usapico
